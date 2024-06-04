@@ -1,0 +1,37 @@
+{
+   "extends": "../kit/tsconfig.json",
+   "compilerOptions": {
+      "allowUnusedLabels": true,
+      "noUnusedLocals": false,
+      "importHelpers": false,
+
+      "module": "commonjs",
+      "target": "es2021",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "baseUrl": "./",
+      "outDir": "bin",
+      // "rootDirs": ["./srs, ../gserver/src"],
+      "types": ["node"],
+      "paths": {
+         "kit/*": [
+            "../kit/src/*"
+         ],
+         "gserver/*": [
+            "../gserver/src/core/*"
+         ],
+         "tools-server/*": [
+            "./src/*"
+         ]
+      }
+   },
+   "include": [
+      "../kit/src/**/*",
+      "../gserver/src/**/*",
+      "src/**/*"
+   ],
+   "exclude": [
+      "../../node_modules/**/*"
+   ]
+}

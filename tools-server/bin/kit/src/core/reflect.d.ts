@@ -1,0 +1,11 @@
+export declare function isString(value: any): value is string;
+export declare function isBoolean(value: any): value is boolean;
+export declare function isNumber(value: any): value is number;
+export declare let isArray: (<T = any>(value: any) => value is T[]);
+export declare function isEmpty(value: any): boolean;
+export declare function isFunction(value: any): value is Function;
+export declare function isSubClass(subclass: any, superclass: any): boolean;
+export declare function isClass(obj: any): boolean;
+export declare function toNumber(value: any, fallback?: number): number;
+export declare function toString(value: any, fallback?: string): string;
+export declare function instantiate<T>(type: ConstructorOf<T>, ...args: any[]): T;

@@ -1,0 +1,11 @@
+{
+  "name": "kit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+      "kit-watch": "kit tsc --watch",
+      "kit-compile": "kit tsc",
+      "kit-lint": "tslint -c ../kit/tslint.json -p tsconfig.json -t verbose"
+  },
+  "author": "FK",
+}

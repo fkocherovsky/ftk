@@ -1,0 +1,64 @@
+﻿{
+   "compileOnSave": true,
+   "compilerOptions": {
+      "allowUnreachableCode": false,
+      "allowUnusedLabels": false,
+      "baseUrl": ".",
+      "declaration": true,
+      "emitDecoratorMetadata": false,
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "inlineSources": true,
+      "forceConsistentCasingInFileNames": true,
+      "incremental": true,
+      "jsx": "react",
+      "lib": [
+         "DOM",
+         "DOM.Iterable",
+         "ES2022",
+         "ESNext.Array",
+         "ESNext.Intl"
+      ],
+      "listEmittedFiles": false,
+      "module": "amd",
+      //"moduleResolution": "classic",
+      "moduleResolution": "node",
+      "newLine": "CRLF",
+      "noEmitOnError": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": false,
+      //"outDir": "lib/gml",
+      "paths": {
+         "kit/*": [
+            "../kit/src/*"
+         ]
+      },
+      "plugins": [
+         {
+            "name": "@styled/typescript-styled-plugin",
+            "validate": false
+         }
+      ],
+      "types":[],
+      "preserveConstEnums": true,
+      "pretty": true,
+      "reactNamespace": "kit",
+      "removeComments": true,
+      "skipLibCheck": false,
+      "sourceMap": true,
+      "strictNullChecks": false,
+      "stripInternal": true,
+      "suppressExcessPropertyErrors": false,
+      "suppressImplicitAnyIndexErrors": false,
+      "target": "ES2021"
+   },
+   "include": [
+      "src/**/*", "src/core/errors.ts", "src/core/build-schema.ts", "../gserver/src/core/logger.ts"   ],
+   "exclude": [
+      //"../gml/src/ultifi/parsers/protogen-cli.js"
+   ]
+
+}

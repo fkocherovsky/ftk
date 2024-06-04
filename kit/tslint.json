@@ -1,0 +1,493 @@
+{
+   "rulesDirectory": [
+      "tslint-consistent-codestyle",
+      "../gml-build/etc/ts-rules"
+   ],
+   "linterOptions": {
+      "exclude": [
+         "**/etc/**/*.js",
+         "**/ultifi/parsers/protogen-cli.js"
+      ]
+   },
+   "defaultSeverity": "error",
+   "rules": {
+      ///////////////////////////////////////////////////
+      // TSLINT CORE RULES
+      // (see https://palantir.github.io/tslint/rules/)
+      "adjacent-overload-signatures": [
+         true
+      ],
+      "arrow-parens": [
+         true,
+         "ban-single-arg-parens"
+      ],
+      "arrow-return-shorthand": [
+         true,
+         "multiline"
+      ],
+      "ban": [
+         true,
+         {
+            "name": "eval",
+            "message": "Do not use 'eval'."
+         }
+      ],
+      "ban-types": [
+         true,
+         [
+            "String",
+            "Use 'string' instead."
+         ],
+         [
+            "Number",
+            "Use 'number' or 'integer' instead."
+         ],
+         [
+            "Boolean",
+            "Use 'boolean' instead."
+         ]
+      ],
+      "callable-types": [
+         true
+      ],
+      "class-name": [
+         true
+      ],
+      "curly": [
+         true,
+         "ignore-same-line"
+      ],
+      "eofline": [
+         true
+      ],
+      "file-header": [
+         true,
+         "Copyright \\([cC]\\) (GM|General Motors)"
+      ],
+      "interface-over-type-literal": [
+         true
+      ],
+      "jsdoc-format": [
+         true
+      ],
+      "label-position": [
+         true
+      ],
+      "member-access": [
+         true,
+         "no-public"
+      ],
+      "new-parens": [
+         true
+      ],
+      "no-angle-bracket-type-assertion": [
+         true
+      ],
+      "no-arg": [
+         true
+      ],
+      "no-consecutive-blank-lines": [
+         true,
+         2
+      ],
+      "no-console": {
+         "severity": "warning"
+      },
+      "no-construct": [
+         true
+      ],
+      "no-debugger": {
+         "severity": "warning"
+      },
+      "no-duplicate-super": [
+         true
+      ],
+      "no-duplicate-switch-case": [
+         true
+      ],
+      "no-duplicate-variable": [
+         true,
+         "check-parameters"
+      ],
+      "no-internal-module": [
+         true
+      ],
+      "no-invalid-template-strings": [
+         true
+      ],
+      "no-invalid-this": [
+         true,
+         "check-function-in-method"
+      ],
+      "no-misused-new": [
+         true
+      ],
+      "no-parameter-properties": [
+         true
+      ],
+      "no-redundant-jsdoc": [
+         true
+      ],
+      "no-reference": [
+         true
+      ],
+      "no-reference-import": [
+         true
+      ],
+      "no-require-imports": [
+         true
+      ],
+      "no-return-await": [
+         true
+      ],
+      "no-shadowed-variable": [
+         true
+      ],
+      "no-sparse-arrays": [
+         false
+      ],
+      "no-switch-case-fall-through": [
+         true
+      ],
+      "no-this-assignment": [
+         true,
+         {
+            "allowed-names": [
+               "^self$"
+            ],
+            "allow-destructuring": true
+         }
+      ],
+      "no-trailing-whitespace": [
+         true,
+         "ignore-template-strings"
+      ],
+      "no-unnecessary-callback-wrapper": [
+         true
+      ],
+      "no-unnecessary-initializer": [
+         true
+      ],
+      "no-unsafe-finally": [
+         true
+      ],
+      "no-unused-expression": [
+         true,
+         "allow-fast-null-checks"
+      ],
+      "no-var-keyword": [
+         true
+      ],
+      "no-var-requires": [
+         true
+      ],
+      "number-literal-format": [
+         false
+      ],
+      "object-literal-key-quotes": [
+         true,
+         "consistent"
+      ],
+      "one-line": [
+         true,
+         "check-catch",
+         "check-finally",
+         "check-else",
+         "check-open-brace",
+         "check-whitespace"
+      ],
+      "one-variable-per-declaration": [
+         true,
+         "ignore-for-loop"
+      ],
+      "only-arrow-functions": [
+         true,
+         "allow-declarations",
+         "allow-named-functions"
+      ],
+      "ordered-imports": [
+         true,
+         {
+            "import-sources-order": "case-insensitive",
+            "named-imports-order": "lowercase-last",
+            "grouped-imports": false
+         }
+      ],
+      "prefer-switch": [
+         true,
+         {
+            "min-cases": 3
+         }
+      ],
+      "prefer-template": [
+         true,
+         "allow-single-concat"
+      ],
+      "quotemark": [
+         true,
+         "single",
+         "jsx-double"
+      ],
+      "semicolon": [
+         true
+      ],
+      "space-before-function-paren": [
+         true,
+         {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always",
+            "method": "never",
+            "constructor": "never"
+         }
+      ],
+      "switch-final-break": [
+         true,
+         "always"
+      ],
+      "trailing-comma": [
+         false,
+         {
+            "multiline": "never",
+            "singleline": "never",
+            "esSpecCompliant": true
+         }
+      ],
+      "typedef-whitespace": [
+         true,
+         {
+            "call-signature": "nospace",
+            "index-signature": "nospace",
+            "parameter": "nospace",
+            "property-declaration": "nospace",
+            "variable-declaration": "nospace"
+         },
+         {
+            "call-signature": "onespace",
+            "index-signature": "onespace",
+            "parameter": "onespace",
+            "property-declaration": "onespace",
+            "variable-declaration": "onespace"
+         }
+      ],
+      "use-isnan": [
+         true
+      ],
+      "variable-name": [
+         true,
+         "ban-keywords"
+      ],
+      "whitespace": [
+         true,
+         "check-branch",
+         "check-decl",
+         "check-operator",
+         "check-module",
+         "check-separator",
+         "check-rest-spread",
+         "check-type",
+         "check-typecast",
+         "check-type-operator",
+         "check-preblock"
+      ],
+      ///////////////////////////////////////////////////
+      // TSLINT CONSISTENT-CODESTYLE RULES
+      // (see https://github.com/ajafff/tslint-consistent-codestyle)
+      // code naming conventions
+      "naming-convention": [
+         true,
+         // all classes and interfaces must be PascalCase
+         {
+            "type": "type",
+            "format": [
+               "PascalCase"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // generic type parameters are single UPPER_CASE letter, plus optional digit
+         {
+            "type": "genericTypeParameter",
+            "regex": "^[A-Z][0-9]?$",
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // all class members must be camelCase
+         {
+            "type": "member",
+            "format": [
+               "camelCase"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // private class members must have leading underscore
+         {
+            "type": "member",
+            "modifiers": [
+               "private"
+            ],
+            "leadingUnderscore": "require"
+         },
+         // static class members can also be in UPPER_CASE
+         {
+            "type": "member",
+            "modifiers": [
+               "static"
+            ],
+            "format": [
+               "camelCase",
+               "UPPER_CASE"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // enum members are PascalCase or UPPER_CASE
+         {
+            "type": "enumMember",
+            "format": [
+               "PascalCase",
+               "UPPER_CASE"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // local variables must be camelCase or short UPPER_CASE (single letters)
+         {
+            "type": "variable",
+            "modifiers": [
+               "local"
+            ],
+            "regex": "^(([a-z]+\\w*)|([A-Z][A-Z\\d]{0,2})|GLOSSARY|ICON)$",
+            "format": [
+               "camelCase",
+               "UPPER_CASE"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // internal module (non-exported) variables must be in camelCase with leading underscore
+         {
+            "type": "variable",
+            "modifiers": [
+               "global"
+            ],
+            "format": [
+               "camelCase"
+            ],
+            "leadingUnderscore": "require",
+            "trailingUnderscore": "forbid"
+         },
+         // internal module (non-exported) constants must be in UPPER_CASE
+         {
+            "type": "variable",
+            "modifiers": [
+               "global",
+               "const"
+            ],
+            "format": [
+               "UPPER_CASE"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // special global constants in PascalCase
+         {
+            "type": "variable",
+            "modifiers": [
+               "global"
+            ],
+            "filter": "^(Model|Runtime|Shell|Settings|css)$",
+            "format": [],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // exported module variables must be in camelCase without leading underscore
+         {
+            "type": "variable",
+            "modifiers": [
+               "export"
+            ],
+            "format": [
+               "camelCase"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         },
+         // exported module constants must be in UPPER_CASE
+         {
+            "type": "variable",
+            "modifiers": [
+               "export",
+               "const"
+            ],
+            "regex": ".*",
+            "format": [
+               "UPPER_CASE"
+            ],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+         }
+      ],
+      // consistent use of curly braces
+      "ext-curly": [
+         false,
+         "consistent",
+         "else",
+         "braced-child",
+         "nested-if-else"
+      ],
+      "no-accessor-recursion": [
+         true
+      ],
+      "no-static-this": [
+         true
+      ],
+      ///////////////////////////////////////////////////
+      // GML RULES
+      "sort-gml-imports": [
+         true,
+         {
+            "imports": [
+               "gml",
+               "gml-ev",
+               "gml-ui",
+               "gml-style",
+               "gml-web",
+               "gml-gallery",
+               "gml-server",
+               "gfs",
+               "gfs-ui",
+               "gfs-server",
+               "bev",
+               "bev-mar",
+               "bev-ui",
+               "vcn-admin-ui",
+               "klp-ui"
+            ]
+         }
+      ],
+      "module-usage-restriction": [
+         true,
+         {
+            "restrictions": [
+               {
+                  "moduleRe": "^gml-ev\/\\w+\/\\w+$",
+                  "allowedRe": [
+                     "^gml-ev.*"
+                  ],
+                  "description": "Only top-level modules can be used outside the gml-ev"
+               },
+               {
+                  "moduleRe": "^gml-ev\/battery\/\\w+\/battery_cals$",
+                  "allowedRe": [
+                     "^gml-ev\/battery\/battery"
+                  ],
+                  "description": "battery_cals can be used only in gml-ev/battery/battery module"
+               }
+            ]
+         }
+      ],
+      "no-gml-jsx-spread": true
+   }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"build-schema.js","sourceRoot":"","sources":["../../../../../kit/src/core/build-schema.ts"],"names":[],"mappings":";;AAAA,yBAAyB;AACzB,6BAA6B;AAE7B,IAAI,SAAS,GAAG,IAAI,CAAC,SAAS,CAAC,EAAE,CAAC,SAAS,CAAC,CAAC","sourcesContent":["import * as Fs from 'fs';\r\nimport * as Util from 'util';\r\n\r\nlet _readFile = Util.promisify(Fs.writeFile);"]}

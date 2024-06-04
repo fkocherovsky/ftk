@@ -1,0 +1,1 @@
+{"version":3,"file":"comm.js","sourceRoot":"","sources":["../../../../../gserver/src/core/comm.ts"],"names":[],"mappings":";;;AAAA,MAAa,QAAQ;;AAArB,4BAEC;AADW,wBAAe,GAAG,OAAO,CAAC","sourcesContent":["export class Settings {\r\n     static maxHttpBodySize = 1000000;\r\n}"]}
